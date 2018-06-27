@@ -1,0 +1,422 @@
+body {
+  margin: 0;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #024586;
+
+  background-color: #c4c3c8;
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+
+  width: 400px;
+  min-height: 500px;
+  margin-left: auto;
+  padding-right: 50px;
+  padding-left: 20px;
+  padding-top: 80px;
+  padding-bottom: 50px;
+
+  background-color: #ffffff;
+}
+
+.description p {
+  margin-bottom: 50px;
+
+  line-height: 24px;
+}
+
+.description-data {
+  color: #000000;
+}
+
+.new-user-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  display: none;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.new-user-overlay-show {
+  display: block;
+}
+
+.new-user {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: 3;
+
+  display: none;
+  width: 500px;
+  margin: auto;
+  margin-top: -300px;
+  padding: 35px;
+
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.login {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: 3;
+
+  display: none;
+  width: 500px;
+  margin: auto;
+  margin-top: -150px;
+  padding: 35px;
+
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.new-user-show {
+  display: block;
+
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+}
+
+.login-show {
+  display: block;
+
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+}
+
+.reg-error {
+  animation-name: shake;
+  animation-duration: 0.6s;
+}
+
+.login-error {
+  animation-name: shake;
+  animation-duration: 0.6s;
+}
+
+.main-form h1,
+.login-form h1 {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-size: 24px;
+  color: #024586;
+  font-weight: 600;
+}
+
+.login-form h1 {
+  margin-bottom: 50px;
+}
+
+.main-form input,
+.login-form input {
+  padding: 10px;
+
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #024586;
+
+  background-color: #bbbabf;
+  border: none;
+  border-radius: 5px;
+}
+
+.main-form span {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #024586;
+}
+
+.main-form p {
+  margin: 20px 0;
+}
+
+.login-form p {
+  margin: 20px 0;
+}
+
+.main-form .error-message {
+  margin-bottom: 20px;
+
+  color: red;
+  font-style: italic;
+  text-transform: none;
+
+  opacity: 0;
+}
+
+.login-form .error-message {
+  margin-bottom: 20px;
+
+  color: red;
+  font-style: italic;
+  text-transform: none;
+
+  opacity: 0;
+}
+
+.form-name label {
+  margin-right: 10px;
+}
+
+.main-form .name {
+  margin-right: 25px;
+}
+
+.form-gender span,
+.form-gender label {
+  margin-right: 25px;
+}
+
+.form-date span {
+  margin-right: 10px;
+}
+
+.form-date select {
+  width: 60px;
+  height: 40px;
+
+  font-size: 14px;
+  color: #024586;
+  text-transform: uppercase;
+
+  background-color: #bbbabf;
+  border: none;
+  cursor: pointer;
+}
+
+.form-date select[name="month"] {
+  width: 100px;
+}
+
+.form-lit span {
+  display: block;
+
+  margin-bottom: 10px;
+}
+
+.form-login label {
+  margin-right: 15px;
+}
+
+.form-login input[type=text] {
+  margin-right: 15px;
+}
+
+.main-form textarea {
+  min-width: 490px;
+  min-height: 50px;
+  padding: 10px;
+  box-sizing: border-box;
+
+  font: inherit;
+}
+
+.main-form .agree {
+  text-transform: none;
+}
+
+.button {
+  padding: 10px 15px;
+  margin-right: 15px;
+
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  background-color: #e68a33;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #cf732f;
+}
+
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #cf732f;
+}
+
+.button-login {
+  background-color: #4f6c91;
+}
+
+.button-login:hover,
+.button-login:active {
+  background-color: #3f628f;
+}
+
+.button-logout {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+
+.form-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  width: 20px;
+  height: 20px;
+
+  font-size: 0;
+
+  background-color: transparent;
+  border: 0;
+
+  cursor: pointer;
+}
+
+.form-close::before,
+.form-close::after {
+  content: "";
+
+  position: absolute;
+  top: 10px;
+  left: 2px;
+
+  width: 19px;
+  height: 3px;
+
+  background-color: #000000;
+}
+
+.form-close::before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.form-close::after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px);
+  }
+
+  70% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  90% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px);
+  }
+
+  70% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  90% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+.login-error-text,
+.enter-error-text {
+  position: absolute;
+  bottom: 130px;
+  color: red;
+}
